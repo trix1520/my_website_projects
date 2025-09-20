@@ -44,7 +44,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 0 0;
+    padding: 20px 0;
 }
 
 .header-content {
@@ -283,6 +283,11 @@ main {
     grid-column: 1;
     grid-row: 1;
     align-self: center;
+    transition: all 0.3s ease;
+}
+
+.hero-text:hover {
+    transform: translateY(5px);
 }
 
 .hero-text h1 {
@@ -292,6 +297,8 @@ main {
     margin: 0 0 20px 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
+
+
 
 .hero-text p {
     font-size: 1.2rem;
@@ -321,6 +328,7 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-social a.hero-social-vk:hover {
@@ -344,7 +352,6 @@ main {
     display: flex;
     gap: 20px;
     align-self: end;
-    box-shadow: 5px 10px var(--text-color);
 }
 
 .hero-btn {
@@ -363,6 +370,7 @@ main {
     border-radius: 8px;
     transition: all 0.3s ease;
     text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-btn.catalog {
@@ -384,6 +392,8 @@ main {
     background: white;
     color: var(--text-color);
 }
+
+
 
 footer {
     background-color: var(--footer-color);
