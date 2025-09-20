@@ -259,6 +259,7 @@ main {
     min-height: 600px;
     max-height: 1058px;
     display: flex;
+    margin: 20px 0;
     flex-direction: column;
     justify-content: center;
     color: white;
