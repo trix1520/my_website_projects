@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Разработчик | HTML5, CSS3, JavaScript</title>
+    <meta name="description" content="Профессиональная верстка и создание современных сайтов на HTML5, CSS3 и JavaScript">
+    
+    <!-- Preload критичных ресурсов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preload" href="style.css" as="style">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="logo-text">Frontend Dev</span>
+                </a>
+
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#portfolio" class="nav-link">Портфолио</a></li>
+                        <li><a href="#services" class="nav-link">Услуги</a></li>
+                        <li><a href="#about" class="nav-link">Обо мне</a></li>
+                        <li><a href="#contact" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <!-- Герой секция -->
+            <section class="hero">
+                <h1 class="hero-title">Создаю современные и быстрые сайты</h1>
+                <p class="hero-subtitle">Специализируюсь на чистой семантической верстке, адаптивном дизайне и интерактивных решениях на JavaScript</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fas fa-eye"></i>Смотреть работы
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i>Обсудить проект
+                    </a>
+                </div>
+            </section>
+
+            <!-- Секция услуг -->
+            <section id="services" class="section">
+                <h2>Мои услуги</h2>
+                <div class="services-grid">
+                    <!-- Карточки услуг будут здесь -->
+                </div>
+            </section>
+
+            <!-- Секция портфолио -->
+            <section id="portfolio" class="section">
+                <h2>Мои работы</h2>
+                <div class="portfolio-grid">
+                    <!-- Работы будут здесь -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Простой JavaScript для мобильного меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            menuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
