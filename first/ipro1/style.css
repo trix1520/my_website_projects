@@ -339,17 +339,17 @@ footer {
 }
 
 /* VK цвет */
-.footer-social-links a[href*="vk.com"] i {
+.footer-social-links a[href*="vk.com"]:hover i:hover {
     color: var(--vk-color);
 }
 
 /* Telegram цвет */
-.footer-social-links a[href*="t.me"] i {
+.footer-social-links a[href*="t.me"]:hover i:hover {
     color: var(--telegram-color);
 }
 
 /* YouTube цвет */
-.footer-social-links a[href*="youtube.com"] i {
+.footer-social-links a[href*="youtube.com"]:hover i:hover {
     color: var(--youtube-color);
 }
 
