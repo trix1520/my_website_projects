@@ -31,13 +31,26 @@ body {
     flex-direction: column;
 }
 
+/* Единый контейнер для центрирования */
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 40px 0;
-    max-width: 1900px;
-    margin: 0 auto;
+    padding: 37px 0 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -188,9 +201,7 @@ header {
 
 /* Navigation */
 .header-down {
-    max-width: 1900px;
     margin: 20px auto 0;
-    padding: 0 40px;
     width: 100%;
 }
 
@@ -256,11 +267,10 @@ main {
     position: relative; 
 }
 
-.hero-contetn {
+.hero-content {
     z-index: 2; 
     position: relative;
 }
-
 
 .hero-text h1 {
     font-size: 3rem;
@@ -273,7 +283,7 @@ main {
 footer {
     background-color: var(--footer-color);
     color: var(--text-secondary-color);
-    padding: 40px 40px 20px;
+    padding: 40px 0 20px;
     margin-top: auto;
 }
 
@@ -282,8 +292,6 @@ footer {
     grid-template-columns: auto auto auto auto;
     justify-content: center;
     column-gap: 150px; 
-    max-width: 1900px;
-    margin: 0 auto;
     border-bottom: 1px solid white; 
     padding-bottom: 30px;
     margin-bottom: 20px;
@@ -344,9 +352,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1900px;
-    margin: 0 auto;
-    padding: 0 40px;
 }
 
 .footer-social-links {
@@ -392,11 +397,8 @@ footer {
 
 /* Адаптивность */
 @media (max-width: 1200px) {
-    header,
-    .header-down,
-    .footer-content,
-    .footer-bottom {
-        padding: 20px;
+    .container {
+        padding: 0 20px;
     }
     
     .search input {
@@ -419,7 +421,10 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        padding: 20px;
+        padding: 20px 0 0;
+    }
+    
+    .header-content {
         flex-direction: column;
         gap: 15px;
     }
@@ -442,10 +447,6 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
-    }
-    
-    .header-down {
-        padding: 0 20px;
     }
     
     .header-down ul {
@@ -513,15 +514,6 @@ footer {
     
     main {
         padding: 20px;
-    }
-    
-    footer {
-        padding: 20px;
-    }
-    
-    .footer-content,
-    .footer-bottom {
-        padding: 0 10px;
     }
     
     .footer-social-links {
