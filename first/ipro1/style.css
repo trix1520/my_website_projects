@@ -262,7 +262,7 @@ main {
     justify-content: center;
     align-items: center;
     color: white;
-    text-align: center;
+    text-align: flex-start;
     position: relative; 
 }
 
@@ -277,6 +277,13 @@ main {
     line-height: 1.2;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 100%; 
+    margin: 20px;
 }
 
 footer {
