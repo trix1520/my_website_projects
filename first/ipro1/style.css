@@ -237,9 +237,7 @@ header {
 
 /* Main content */
 main {
-    flex: 1;
-    max-width: 1900px;
-    margin: 0 auto;
+    margin: 10px;
     width: 100%;
 }
 
