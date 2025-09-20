@@ -344,6 +344,7 @@ main {
     display: flex;
     gap: 20px;
     align-self: end;
+    box-shadow: 5px 10px var(--text-color);
 }
 
 .hero-btn {
