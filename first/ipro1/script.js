@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const heroImage = new Image();
         heroImage.src = 'images/hero-bg.jpg';
         heroImage.onload = function() {
-            console.log('Hero image loaded');
+            console.log('Hero image loaded successfully');
+        };
+        
+        heroImage.onerror = function() {
+            console.error('Failed to load hero image');
         };
     }
     
@@ -17,12 +21,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchInput = document.querySelector('.search input');
         if (searchInput) {
             searchInput.addEventListener('input', function(e) {
-                console.log('Search:', e.target.value);
+                if (e.target.value.length > 2) {
+                    console.log('Search query:', e.target.value);
+                    // Здесь можно добавить логику поиска
+                }
+            });
+            
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    console.log('Search submitted:', e.target.value);
+                    // Здесь можно добавить логику отправки поиска
+                }
             });
         }
     }
     
     // Инициализация
-    loadHeroImage();
-    initSearch();
+    try {
+        loadHeroImage();
+        initSearch();
+        console.log('All scripts initialized successfully');
+    } catch (error) {
+        console.error('Error initializing scripts:', error);
+    }
 });
